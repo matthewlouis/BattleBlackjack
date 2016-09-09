@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Battle Blackjack</title>
+<link id="fireworks" rel="stylesheet" type="text/css" href="">
+<link rel="stylesheet" type="text/css" href="styles/layout.css">
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.transit.min.js"></script>
+<script type="text/javascript" src="scripts/howler.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.animateSprite.js"></script>
+<script type="text/javascript" src="scripts/css-fireworks.js"></script>
+</head>
+<body>
+<div class="loading"><h1 id="loadMessage">Loading...</h1></div>
+<div id="wrapper">
+    <div class="spriteArea" id="battleArena">
+    	<div id="playerSpriteContainer">
+        	<div id="playerSprite"><br><br>&nbsp;&nbsp;<span id="playerDMG"></span></div>
+           <div id="playerHP"><span id="playerCurrentHP">--</span>/<span id="playerMaxHP">--</span></div>
+        </div>
+        
+        <div id="dealerSpriteContainer">
+        	<div id="dealerSprite"><br><br>&nbsp;&nbsp;<span id="dealerDMG"></span></div>
+           <div id="dealerHP"><span id="dealerCurrentHP">--</span>/<span id="dealerMaxHP">--</span></div>
+        </div>
+    </div>
+    
+    <div class="spriteArea" id="cardArena">
+    	<div class="scoreLabel">Player Score: </div>
+       <div class="score" id="pScore">--</div>
+       <div class="scoreLabel">Dealer Score: </div>
+       <div class="score" id="dScore">--</div>
+            <div id="playerCards">
+                <div class="pCards" id="pCard1"><img src="images/card-back.png"></div> 
+                <div class="pCards" id="pCard2"><img src="images/card-back.png"></div> 
+                <div class="pCards" id="pCard3"><img src="images/card-back.png"></div> 
+                <div class="pCards" id="pCard4"><img src="images/card-back.png"></div> 
+                <div class="pCards" id="pCard5"><img src="images/card-back.png"></div>
+                <div class="pCards" id="pCard6"><img src="images/card-back.png"></div> 
+                <div class="pCards" id="pCard7"><img src="images/card-back.png"></div>
+                <div class="pCards" id="pCard8"><img src="images/card-back.png"></div>
+                <div class="pCards" id="pCard9"><img src="images/card-back.png"></div> 
+           </div>
+        	<div id="dealerCards">
+           	  <div class="dCards" id="dCard1"><img src="images/card-back.png"></div> 
+                <div class="dCards" id="dCard2"><img src="images/card-back.png"></div> 
+                <div class="dCards" id="dCard3"><img src="images/card-back.png"></div> 
+                <div class="dCards" id="dCard4"><img src="images/card-back.png"></div> 
+                <div class="dCards" id="dCard5"><img src="images/card-back.png"></div>
+                <div class="dCards" id="dCard6"><img src="images/card-back.png"></div> 
+                <div class="dCards" id="dCard7"><img src="images/card-back.png"></div>
+                <div class="dCards" id="dCard8"><img src="images/card-back.png"></div>
+                <div class="dCards" id="dCard9"><img src="images/card-back.png"></div> 
+           </div>
+    </div>
+    
+    <div id="controlBar">
+    	 <button class="button playerControls" id="btnHit" type="button">Hit</button>
+        <button class="button playerControls" id="btnStand" type="button">Stand</button>
+        <button class="button playerControls" id="btnNewGame" type="button">New Game</button>
+        <button class="button playerControls" id="btnMusic" type="button">Music Off</button>
+    </div>
+    
+</div>
+<div id="musicPlayer"></div>
+<script type="text/javascript" src="scripts/battleDisplay.js"></script>
+<script type="text/javascript" src="scripts/game.js"></script>
+</body>
+</html>
